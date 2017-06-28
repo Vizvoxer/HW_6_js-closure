@@ -36,20 +36,14 @@ function sum(x) {
 var sum1 = sum(1);
 console.log(sum1(2));
 
-// ERROR. we have to access var i within scope of IIFE
+// ERROR. we need semicolon as without it engine tries to execure function 5()
 
-(function() {
+function() {
   var a = 5;
   alert(a);
-})();
+};
 
-// or
 
-// var a = 5;
-// (function(a) {
-// var a = 5;
-//   alert(a);
-// })(a)
 
 // SECOND ERROR .as loop is finished before first timeOut fires -
 // each timeOut will display  the final var. so we have to create scope for each setTimeout function, which contains i at the moment of its request

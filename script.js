@@ -37,11 +37,10 @@ var sum1 = sum(1);
 console.log(sum1(2));
 
 // ERROR. we need semicolon as without it engine tries to execure function 5()
-
-function() {
-  var a = 5;
+var a = 5;
+(function () {
   alert(a);
-};
+})();
 
 
 
